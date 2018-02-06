@@ -7,8 +7,9 @@ It is based on the module developped by da4throux : [MMM-Paris-RATP-PG](https://
 This module uses the open API provided by the Nantes Bus organization, TAN. Documentation may by found [here](https://data.nantes.fr/fileadmin/nm_opendata/pdf/Semitan-Documentation-API-V3.pdf).
 > The API is not fully functionnal. For instance, the line color or the line type is not correct (Navibus is not identify for instance, and the line color is always "blue").
 ## Install
-1. Clone the repository
+1. Clone the repository in the module directory :
 ```shell=
+cd ~/MagicMirror/modules/
 git clone https://github.com/normyx/MMM-Nantes-TAN.git
 ```
 2. Install the dependencies
