@@ -1,0 +1,28 @@
+{
+  "name": "MMM-Nantes-TAN",
+  "version": "1.0.0",
+  "description": "Nantes TAN transport in Nantes based on TAN open API",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/da4throux/MMM-Paris-RATP-PG"
+  },
+  "keywords": [
+    "magic mirror",
+    "smart mirror",
+    "localtransport",
+    "module",
+    "paris",
+    "RATP"
+  ],
+  "author": "da4throux",
+  "contributors": "https://github.com/da4throux/MMM-Paris-RATP-PG/graphs/contributors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/da4throux/MMM-Paris-RATP-PG/issues"
+  },
+  "homepage": "https://github.com/da4throux/MMM-Paris-RATP-PG#readme",
+  "dependencies": {
+    "unirest": "latest",
+    "node-forge": "latest"
+  }
+}
