@@ -2,6 +2,7 @@
 This module is for viewing the Nantes Bus Traffic Timetable, from given stops, given bus / tramway & navibus number, and direction.
 It is based on the module developped by da4throux : [MMM-Paris-RATP-PG](https://github.com/da4throux/MMM-Paris-RATP-PG).
 ## Screenshot
+![screenshot](https://github.com/normyx/MMM-Nantes-TAN/blob/master/MMM-Nantes-TAN.png)
 ## API
 This module uses the open API provided by the Nantes Bus organization, TAN. Documentation may by found [here](https://data.nantes.fr/fileadmin/nm_opendata/pdf/Semitan-Documentation-API-V3.pdf).
 > The API is not fully functionnal. For instance, the line color or the line type is not correct (Navibus is not identify for instance, and the line color is always "blue").
