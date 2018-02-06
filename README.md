@@ -58,6 +58,7 @@ The bus stations (`busStations:`) configuration are :
 | sens | true | The direction. May be useally '1' or '2'|
 | color | false | the color to use for this line. May be 'blue', 'green', 'purple', 'orange', 'white' or 'yellow'. If not set, default MagicMirro color will be used. |
 | symbol | false | symbol that may be used in the font awesome library [here](https://fontawesome.com/icons?d=gallery&m=free). If not set, the config `defaultSymbol` will be used. Useally, the 'bus', 'subway' or 'ship' may be used. |
+
 Here is an example:
 ```javascript=
         {
