@@ -48,7 +48,9 @@ The `config:` values are :
 | colorOrange | "rgb(236,114,0)" | The RGB color used when orange is set up in the lines configuration below |
 | defaultSymbol | 'bus' | Default symbol that may be used in the font awesome library [here](https://fontawesome.com/icons?d=gallery&m=free) |
 | busStations | Array | See below |
+
 The bus stations (`busStations:`) configuration are :
+
 | Name | Mandatory | Description |
 | -------- | -------- | -------- |
 | arret | true | The stop symbol from where you want to leave. The symbol is found in the following request : [http://open.tan.fr/ewp/arrets.json](http://open.tan.fr/ewp/arrets.json). For instance, `'COMM'` for Commerce. |
