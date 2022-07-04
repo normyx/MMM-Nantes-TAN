@@ -45,15 +45,15 @@ module.exports = NodeHelper.create({
     }, nextLoad);
   },
 
-  getResponse: function(_url, _processFunction, _stopConfig, _stopData) {
+  getResponse: async function(_url, _processFunction, _stopConfig, _stopData) {
     var self = this;
     var retry = true;
     if (this.config.debug) { console.log (' *** fetching: ' + _url);}
-      unirest.get(_url)
+      return unirest.get(_url)
         .header({
           'Accept': 'application/json;charset=utf-8'
         })
-        .end(function(response){
+        .then(function(response){
           if (response && response.body) {
             if (self.config.debug) {
               console.log (' *** received answer for: ' + _url);
@@ -79,7 +79,7 @@ module.exports = NodeHelper.create({
   /* updateTimetable(transports)
    * Calls processTrains on successful response.
   */
-  updateTimetable: function() {
+  updateTimetable: async function() {
     var self = this;
     var urlArret, urlHoraire, stopConfig;
     if (this.config.debug) { console.log (' *** fetching update');}
@@ -88,9 +88,9 @@ module.exports = NodeHelper.create({
         var stopData = {};
       stopConfig = self.config.busStations[index];
       urlArret = self.config.tanURL+'horairesarret.json/'+stopConfig.arret+'/'+stopConfig.ligne+'/'+stopConfig.sens;
-      self.getResponse(urlArret, self.processArret.bind(this), stopConfig, stopData);
+      await self.getResponse(urlArret, self.processArret.bind(this), stopConfig, stopData);
       urlHoraire = self.config.tanURL+'tempsattente.json/'+stopConfig.arret;
-      self.getResponse(urlHoraire, self.processHorairesLigne.bind(this), stopConfig, stopData);
+      await self.getResponse(urlHoraire, self.processHorairesLigne.bind(this), stopConfig, stopData);
     }
   },
 

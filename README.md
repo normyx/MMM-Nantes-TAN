@@ -54,7 +54,7 @@ The bus stations (`busStations:`) configuration are :
 
 | Name | Mandatory | Description |
 | -------- | -------- | -------- |
-| arret | true | The stop symbol from where you want to leave. The symbol is found in the following request : [http://open.tan.fr/ewp/arrets.json](http://open.tan.fr/ewp/arrets.json). For instance, `'COMM'` for Commerce. |
+| arret | true | The stop symbol from where you want to leave. The symbol is found in the following request : [http://open.tan.fr/ewp/arrets.json](http://open.tan.fr/ewp/arrets.json). then take `codeLieu` for instance, `'COMM'` for Commerce, and get `codeArret` in the following request : [https://open.tan.fr/ewp/tempsattente.json/COMM](https://open.tan.fr/ewp/tempsattente.json/COMM) |
 | ligne | true | The line in the given stop you want to use. The line is found in the following request : [http://open.tan.fr/ewp/arrets.json](http://open.tan.fr/ewp/arrets.json), for a given stop. |
 | sens | true | The direction. May be useally '1' or '2'|
 | color | false | the color to use for this line. May be 'blue', 'green', 'purple', 'orange', 'white' or 'yellow'. If not set, default MagicMirro color will be used. |
@@ -71,11 +71,11 @@ Here is an example:
                 debug: false,
                 showSecondsToNextUpdate:false,
                 busStations: [
-                    {arret: 'COMM', ligne:'C3', sens:'1', color:'blue'},
-                    {arret: 'COMM', ligne:'1', sens:'1', color:'yellow', symbol:'subway'},
+                    {arret: 'COMF1', ligne:'C3', sens:'1', color:'blue'},
+                    {arret: 'COMB2', ligne:'1', sens:'1', color:'yellow', symbol:'subway'},
                     {arret: 'CDCO', ligne:'4', sens:'1', color:'purple', symbol:'bus'},
                     {arret: 'GMAR', ligne:'NL', sens:'1', color:'green', symbol:'ship'},
-                    {arret: 'COMM', ligne:'1', sens:'1', color:'orange'},
+                    {arret: 'COMC1', ligne:'1', sens:'2', color:'orange'},
                 ],
             }
         },
